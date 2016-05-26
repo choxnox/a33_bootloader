@@ -437,7 +437,7 @@ $(obj)u-boot.ubl:       $(obj)u-boot-nand.bin
 
 $(obj)u-boot-$(TARGET).bin:	$(obj)u-boot.bin
 		@cp $(obj)u-boot.bin         $(obj)u-boot-$(CONFIG_TARGET_NAME).bin
-		-@cp -v $(obj)u-boot-$(CONFIG_TARGET_NAME).bin  $(TOPDIR)/../../tools/pack/chips/$(CONFIG_TARGET_NAME)/bin/u-boot-$(CONFIG_TARGET_NAME).bin
+		-@cp -v $(obj)u-boot-$(CONFIG_TARGET_NAME).bin  $(TOPDIR)/../pack/chips/$(CONFIG_TARGET_NAME)/bin/u-boot-$(CONFIG_TARGET_NAME).bin
 
 GEN_UBOOT = \
 		UNDEF_SYM=`$(OBJDUMP) -x $(LIBBOARD) $(LIBS) | \
